@@ -1,5 +1,5 @@
 import { AppProps } from 'next/app';
-import { Head } from 'next/head';
+import { Head } from 'next/document';
 import '@/styles/global.css';
 import '@fontsource/inter';
 
