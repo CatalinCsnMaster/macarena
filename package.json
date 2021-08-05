@@ -1,16 +1,15 @@
 {
-  "name": "startd-theme",
-  "description": "A TypeScript/Next.js theme that includes everything you need to build amazing landing page!",
+  "name": "papionne",
+  "description": "Software Development Agency",
   "version": "1.0.0",
   "private": true,
-  "author": "Jaakko Kytölä <kytola.jaakko@gmail.com> (jaakkokytola.com)",
+  "author": "Catalin Casuneanu <catalin@papionne.com> ",
   "license": "MIT",
   "keywords": [
     "nextjs",
     "starter",
     "typescript",
-    "tailwind",
-    "theme"
+    "tailwind"
   ],
   "scripts": {
     "dev": "next",
@@ -30,12 +29,18 @@
   "dependencies": {
     "@fontsource/inter": "4.2.1",
     "@svgr/webpack": "5.5.0",
+    "babel-loader": "8.2.2",
+    "css-loader": "6.2.0",
+    "file-loader": "6.2.0",
     "next": "10.0.7",
     "next-seo": "4.20.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-particles-js": "3.4.1",
-    "twind": "0.15.4"
+    "sass-loader": "10.1.1",
+    "style-loader": "3.2.1",
+    "twind": "0.15.4",
+    "url-loader": "4.1.1"
   },
   "devDependencies": {
     "@commitlint/cli": "11.0.0",

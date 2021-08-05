@@ -8,21 +8,18 @@ import CasesSection from '@/components/cases-section';
 import SocialProof from '@/components/social-proof';
 import PricingTable from '@/components/pricing-table';
 import Footer from '@/components/footer';
+import BrandsSection from '@/components/brands-section';
 
 export default function Home() {
   return (
     <Page>
-      <NextSeo
-        title="STARTD - Template"
-        description="A TypeScript/Next.js theme that includes everything you need to build amazing landing page!"
-      />
+      <NextSeo title="Papionne Software Agency" description="Software Development Company" />
       <Header />
       <main>
-        <VideoSection />
-        <ListSection />
         <FeatureSection />
+        <BrandsSection />
+        <ListSection />
         <CasesSection />
-        <SocialProof />
         <PricingTable />
       </main>
       <Footer />

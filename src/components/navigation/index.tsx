@@ -1,6 +1,7 @@
 import { tw } from 'twind';
 import { useState } from 'react';
 import Button from '@/components/button';
+import { css } from 'twind/css';
 
 interface IMenuButton {
   toggleMenu: React.MouseEventHandler<HTMLButtonElement>;
@@ -18,33 +19,26 @@ const links = [
     href: `/`,
   },
   {
-    label: `Testimonials`,
+    label: `Learn`,
     href: `/`,
   },
   {
-    label: `Pricing`,
+    label: `Support`,
     href: `/`,
   },
   {
     label: `Blog`,
     href: `/`,
   },
+  {
+    label: `About`,
+    href: `/`,
+  },
 ];
 
-const secondaryLinks = [
-  {
-    label: `Contact sales`,
-    href: `/`,
-  },
-  {
-    label: `Log in`,
-    href: `/`,
-  },
-  {
-    label: `Get Started`,
-    href: `/`,
-  },
-];
+const navigationStyle = css`
+  background-color: #64c8cd;
+`;
 
 const MenuButton = ({ toggleMenu, showMenu }: IMenuButton) => (
   <button
@@ -52,7 +46,7 @@ const MenuButton = ({ toggleMenu, showMenu }: IMenuButton) => (
     aria-controls="mobile-menu"
     aria-expanded={showMenu}
     onClick={toggleMenu}
-    className={tw(`p-2 text-gray-400`)}
+    className={tw(`p-2 text-gray-50`)}
   >
     <span className={tw(`sr-only`)}>Open menu</span>
     {showMenu ? (
@@ -115,32 +109,31 @@ const Navigation = () => {
   const toggleMenu = () => setShowMenu(!showMenu);
 
   return (
-    <nav className={tw(`bg-white`)}>
+    <nav className={tw(navigationStyle)}>
       <div className={tw(`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8`)}>
         <div className={tw(`flex items-center justify-between h-24`)}>
           <div className={tw(`flex items-center`)}>
             <div className={tw(`flex-shrink-0`)}>
-              <img className={tw(`h-12 w-12`)} src="logo.svg" alt="logo" width={48} height={48} />
-            </div>
-            <div className={tw(`hidden md:block`)}>
-              <div className={tw(`ml-10 flex items-baseline space-x-4`)}>
-                {links.map((link: Link) => (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    className={tw(`text-gray-500 hover:text-gray-600 px-3 py-2 rounded-md font-medium`)}
-                  >
-                    {link.label}
-                  </a>
-                ))}
-              </div>
+              <img
+                className={tw(`h-auto w-auto`)}
+                src="https://papionne.com/wp-content/uploads/2015/02/Logo_Papionne_Site1.png"
+                alt="logo"
+                width={300}
+                height={48}
+              />
             </div>
           </div>
           <div className={tw(`hidden md:block`)}>
-            <div className={tw(`ml-4 flex items-center md:ml-6`)}>
-              <Button modifier="border-0 mr-2">Contact sales</Button>
-              <Button modifier="border-0 mr-2">Log in</Button>
-              <Button primary>Get started</Button>
+            <div className={tw(`ml-10 flex items-baseline space-x-4`)}>
+              {links.map((link: Link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className={tw(`text-gray-50 hover:text-gray-600 px-3 py-2 rounded-md font-medium`)}
+                >
+                  {link.label}
+                </a>
+              ))}
             </div>
           </div>
           <div className={tw(`-mr-2 flex md:hidden`)}>

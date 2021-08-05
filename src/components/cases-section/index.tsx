@@ -17,8 +17,8 @@ const ParticleBg = () => (
           enable: false,
         },
         move: {
-          direction: `right`,
-          speed: 0.3,
+          direction: `none`,
+          speed: 2,
         },
         size: {
           value: 1,
@@ -68,9 +68,9 @@ const CasesSection = () => (
         <ParticleBg />
       </div>
       <div className={tw(`max-w-7xl mx-4 lg:mx-auto pt-20 lg:pt-40`)}>
-        <h1 className={tw(`text-white text-4xl lg:text-7xl font-bold text-center`)}>What will you build?</h1>
+        <h1 className={tw(`text-white text-4xl lg:text-7xl font-bold text-center`)}>What will you construiesti?</h1>
         <p className={tw(`text-white text-gray-400 text-center text-xl mt-12`)}>
-          Don’t just take our word for it — see what leaders in digital are saying
+          Don’t just take our words for it, mo — see what leaders in digital are saying
         </p>
         <div className={tw(`mx-auto pt-24`)}>
           <div className={tw(`w-full flex flex-wrap justify-around`)}>
@@ -79,7 +79,9 @@ const CasesSection = () => (
                 key={article.title}
                 className={tw(
                   `xl:w-1/3 sm:w-5/12 sm:max-w-xs relative mb-32 lg:mb-20
-                      xl:max-w-sm lg:w-1/2 w-11/12 mx-auto sm:mx-0 cursor-pointer hover:scale-105`,
+                      xl:max-w-sm lg:w-1/2 w-11/12 mx-auto sm:mx-0 cursor-pointer 
+                      border-4 border-transparent 
+                      hover:scale-105 hover:border-papionne-500`,
                 )}
               >
                 <div className={tw(`h-64 z-20`)}>

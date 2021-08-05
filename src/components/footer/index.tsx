@@ -1,5 +1,6 @@
 import { tw } from 'twind';
 import Button from '@/components/button';
+import { css } from 'twind/css';
 
 const productLinks = [`Features`, `Customers`, `Platform`, `Pricing`, `Enterprise`, `What's new?`];
 const aboutLinks = [`About Us`, `Careers`, `Leadership`, `Blog`, `Events`, `Press`];
@@ -15,12 +16,21 @@ const resourceLinks = [
   `Other resources`,
 ];
 
+const footerStyle = css`
+  background-color: #f3f3f3;
+`;
+
 const Footer = () => (
-  <footer className={tw(`bg-white border-t border-gray-400 pt-14 pb-16`)}>
+  <footer className={tw(footerStyle, `bg-white pt-14 pb-16`)}>
     <div className={tw(`max-w-7xl mx-auto text-gray-400 px-8 lg:px-0 flex flex-wrap`)}>
       <div className={tw(`mb-14 flex items-center w-full`)}>
-        <img className={tw(`h-12 w-12 mr-4`)} src="logo.svg" alt="logo" width={48} height={48} />
-        <p className={tw(`text-4xl text-indigo-500 font-bold`)}>STARTD</p>
+        <img
+          className={tw(`h-auto w-auto mr-4`)}
+          src="https://papionne.com/wp-content/uploads/2015/02/Logo_Papionne_Site1.png"
+          alt="logo"
+          width={48}
+          height={48}
+        />
       </div>
       <div className={tw(`w-full lg:w-1/2`)}>
         <ul className={tw(`text-lg font-light flex flex-wrap w-full`)}>

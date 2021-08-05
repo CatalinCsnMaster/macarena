@@ -9,7 +9,7 @@ interface IProps {
 const Page = ({ children }: IProps) => (
   <div>
     <Head>
-      <link rel="icon" href="/logo.svg" />
+      <link rel="icon" href="https://papionne.com/wp-content/uploads/2015/02/Logo_Papionne_Site1.png" />
     </Head>
     <div className={tw(`min-h-screen flex flex-col`)}>
       <Navigation />
