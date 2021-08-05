@@ -1,5 +1,4 @@
 import { tw, css } from 'twind/css';
-import Button from '@/components/button';
 import Image from 'next/image';
 
 const headerStyle = css`
