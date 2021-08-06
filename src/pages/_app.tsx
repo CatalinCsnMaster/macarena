@@ -12,11 +12,16 @@ if (typeof window !== `undefined`) {
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <div
+      style={{
+        width: `100%`,
+        overflow: `hidden`,
+      }}
+    >
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <Component {...pageProps} />
-    </>
+    </div>
   );
 }

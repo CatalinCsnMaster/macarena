@@ -10,6 +10,9 @@ export default {
       colors: {
         papionne: '#64c8cd',
       },
+      minHeight: {
+        hero: '70vh',
+      },
     },
   },
 };
