@@ -1,6 +1,7 @@
 import { tw } from 'twind';
 import { useState } from 'react';
 import { css } from 'twind/css';
+import Link from 'next/link';
 
 interface IMenuButton {
   toggleMenu: React.MouseEventHandler<HTMLButtonElement>;
@@ -32,6 +33,10 @@ const links = [
   {
     label: `About`,
     href: `/`,
+  },
+  {
+    label: `Contact`,
+    href: `/contact`,
   },
 ];
 
@@ -100,25 +105,25 @@ const Navigation = () => {
         <div className={tw(`flex items-center justify-between h-24`)}>
           <div className={tw(`flex items-center`)}>
             <div className={tw(`flex-shrink-0`)}>
-              <img
-                className={tw(`h-auto w-auto`)}
-                src="https://papionne.com/wp-content/uploads/2015/02/Logo_Papionne_Site1.png"
-                alt="logo"
-                width={300}
-                height={48}
-              />
+              <Link href="/">
+                <img
+                  className={tw(`h-auto w-auto`)}
+                  src="https://papionne.com/wp-content/uploads/2015/02/Logo_Papionne_Site1.png"
+                  alt="logo"
+                  width={300}
+                  height={48}
+                />
+              </Link>
             </div>
           </div>
           <div className={tw(`hidden md:block`)}>
             <div className={tw(`ml-10 flex items-baseline space-x-4`)}>
               {links.map((link: Link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  className={tw(`text-gray-50 hover:text-gray-600 px-3 py-2 rounded-md font-medium`)}
-                >
-                  {link.label}
-                </a>
+                <span className={tw(`text-gray-50 hover:text-gray-600 px-3 py-2 rounded-md font-medium`)}>
+                  <Link key={link.label} href={link.href}>
+                    {link.label}
+                  </Link>
+                </span>
               ))}
             </div>
           </div>

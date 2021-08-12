@@ -18,6 +18,14 @@ Website built with:
 - 🚫 **lint-staged** — Run linters against staged git files
 - 🗂 **Absolute import** — Import folders and files using the `@` prefix
 
+## Sample Projects
+
+<a src="https://www.tensorflow.org/">Tensorflow</a>
+<a src="https://www.mindnode.com/">MindNode</a>
+<a src="https://www.talent.io/p/en-fr/home">Talent.io</a>
+<a src="https://sparkar.facebook.com/ar-studio/">Ar Studio</a>
+<a src="https://kuailiandp.com/">Kuailiandp</a>
+
 ## 🚀 Getting started
 
 Run the following commands inside the project folder:

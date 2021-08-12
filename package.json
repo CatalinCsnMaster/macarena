@@ -29,9 +29,12 @@
   "dependencies": {
     "@fontsource/inter": "4.2.1",
     "@svgr/webpack": "5.5.0",
+    "@types/lodash": "4.14.172",
     "babel-loader": "8.2.2",
     "css-loader": "6.2.0",
     "file-loader": "6.2.0",
+    "formik": "2.2.9",
+    "lodash": "4.17.21",
     "next": "10.0.7",
     "next-seo": "4.20.0",
     "react": "17.0.1",
@@ -40,7 +43,9 @@
     "sass-loader": "10.1.1",
     "style-loader": "3.2.1",
     "twind": "0.15.4",
-    "url-loader": "4.1.1"
+    "url-loader": "4.1.1",
+    "yup": "0.32.9",
+    "yup-phone": "1.2.19"
   },
   "devDependencies": {
     "@commitlint/cli": "11.0.0",
